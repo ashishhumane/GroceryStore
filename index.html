@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <div class="logo">
+            <p>farm2cart</p>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="about.html" target="_blank">About Us</a></li>
+            <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
+            <li><a href="vendorProduct.html#cart-section" target="_blank">Cart</a></li>
+        </ul>
+        <div class="search-icon">
+            <input class="nav-input" type="text" placeholder="Search Here...">
+            <img src="img/serachicon.png" alt="">
+        </div>
+
+        <div class="button">
+            <a target=""><button type="button" onclick=openDialogbox() class="nav-button">Login</button></a>
+            <a target=""><button type="button" id="signup-button-2" class="nav-button">Sign Up</button></a>
+        </div>
+
+    </nav>
+
+    <!-- background image containing tagline and button -->
+    <div class="tagline">
+        <p>Fresh, Organic, and Local - Just for You!!</p>
+        <a href="#vendons-section"><button class="shop-now">Shop Now</button></a>
+    </div>
+
+    <!-- code of modal box  -->
+
+    <dialog id="dialog-box">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="close-modal" onclick=closeMyModal() src="img/final.png" alt="">
+        <h2>Login</h2>
+        <form id="submitform" action="php/login.php" method="post">
+            <input name="username" class="input1" type="text" placeholder="email">
+            <input name="password" class="input2" type="password" placeholder="Password">
+            <a class="forgot-password" href="#">Forgot password</a>
+            <div class="buttons">
+                <button type="submit" class="login">Login</button>
+                <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
+            </div>
+            <span class="para">Not registered?</span><a class="redirect-to-signup" href="#dialog-box-signup">Create an
+                account</a>
+        </form>
+    </dialog>
+
+    <!-- signup page dialog box -->
+
+    <dialog id="dialog-box-signup">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="closeSignup" src="img/final.png" alt="">
+        <h2>Sign Up</h2>
+        <form action="php/index.php" method="post" id="submit-Signup-form">
+            <input name="name" class="name" type="text" placeholder="Name">
+            <input name="username" class="username" type="text" placeholder="Username">
+            <input name="email" class="email" type="email" placeholder="Email">
+            <input name="password" class="password" type="password" placeholder="Password">
+            <input name="con-pass" class="con-pass" type="password" placeholder="Confirm Password">
+            <div class="buttons">
+
+                <button type="submit" class="sign-up">Sign Up</button>
+            </div>
+            <span class="para">Already have a account?</span><a href="#dialog-box" class="redirect-to-login">Login</a>
+        </form>
+    </dialog>
+
+    <!-- our featured products -->
+    <div class="products">
+        <h2>Our Products</h2>
+    </div>
+    <div class="slider-container1">
+        <div class="slider1">
+            <img src="img/Bananas.jpeg" alt="Bananas">
+            <img src="img/bellpepper.jpeg" alt="bellpepper">
+            <img src="img/cabbage.jpeg" alt="cabbage">
+            <img src="img/carrots.jpeg" alt="carrots">
+            <img src="img/mangoes.jpeg" alt="mangoes">
+            <img src="img/potatos.jpeg" alt="potatos">
+            <img src="img/tomato.jpeg" alt="tomato">
+            <img src="img/Bananas.jpeg" alt="Bananas">
+            <img src="img/bellpepper.jpeg" alt="bellpepper">
+            <img src="img/cabbage.jpeg" alt="cabbage">
+            <img src="img/carrots.jpeg" alt="carrots">
+            <img src="img/mangoes.jpeg" alt="mangoes">
+            <img src="img/potatos.jpeg" alt="potatos">
+            <img src="img/tomato.jpeg" alt="tomato"> 
+        </div>
+    </div>
+
+    <!-- vendor -->
+
+
+    <div class="vendors">
+        <h2 id="vendons-section"> Our Vendors</h2>
+        <p>Bringing you the freshest, handpicked vegetables straight from trusted local farmers, ensuring quality,
+            affordability, and convenience—because healthy eating starts with the best ingredients! </p>
+    </div>
+
+    <div class="sellers">
+        <!-- Vendor 1 -->
+        <div class="vendor-card" id="vendor-card-1">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Mandar Borade</p>
+                <div class="final-rating" id="rating-display-1">★★★★☆ <span>(4.2/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-1" name="rating-1" value="5">
+                    <label for="star5-1">★</label>
+                    <input type="radio" id="star4-1" name="rating-1" value="4">
+                    <label for="star4-1">★</label>
+                    <input type="radio" id="star3-1" name="rating-1" value="3">
+                    <label for="star3-1">★</label>
+                    <input type="radio" id="star2-1" name="rating-1" value="2">
+                    <label for="star2-1">★</label>
+                    <input type="radio" id="star1-1" name="rating-1" value="1">
+                    <label for="star1-1">★</label>
+                </div>
+                <a href="vendorProduct.html"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+
+        <!-- Vendor 2 -->
+        <div class="vendor-card" id="vendor-card-2">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Rahul Sharma</p>
+                <div class="final-rating" id="rating-display-2">★★★☆☆ <span>(3.5/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-2" name="rating-2" value="5">
+                    <label for="star5-2">★</label>
+                    <input type="radio" id="star4-2" name="rating-2" value="4">
+                    <label for="star4-2">★</label>
+                    <input type="radio" id="star3-2" name="rating-2" value="3">
+                    <label for="star3-2">★</label>
+                    <input type="radio" id="star2-2" name="rating-2" value="2">
+                    <label for="star2-2">★</label>
+                    <input type="radio" id="star1-2" name="rating-2" value="1">
+                    <label for="star1-2">★</label>
+                </div>
+                <a href="#"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+
+        <!-- Vendor 3 -->
+        <div class="vendor-card" id="vendor-card-3">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Priya Deshmukh</p>
+                <div class="final-rating" id="rating-display-3">★★★★☆ <span>(4.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-3" name="rating-3" value="5">
+                    <label for="star5-3">★</label>
+                    <input type="radio" id="star4-3" name="rating-3" value="4">
+                    <label for="star4-3">★</label>
+                    <input type="radio" id="star3-3" name="rating-3" value="3">
+                    <label for="star3-3">★</label>
+                    <input type="radio" id="star2-3" name="rating-3" value="2">
+                    <label for="star2-3">★</label>
+                    <input type="radio" id="star1-3" name="rating-3" value="1">
+                    <label for="star1-3">★</label>
+                </div>
+                <a href="#"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+
+
+        <!-- Vendor 4 -->
+        <div class="vendor-card" id="vendor-card-4">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Sneha Joshi</p>
+                <div class="final-rating" id="rating-display-4">★★★★★ <span>(5.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-4" name="rating-4" value="5">
+                    <label for="star5-4">★</label>
+                    <input type="radio" id="star4-4" name="rating-4" value="4">
+                    <label for="star4-4">★</label>
+                    <input type="radio" id="star3-4" name="rating-4" value="3">
+                    <label for="star3-4">★</label>
+                    <input type="radio" id="star2-4" name="rating-4" value="2">
+                    <label for="star2-4">★</label>
+                    <input type="radio" id="star1-4" name="rating-4" value="1">
+                    <label for="star1-4">★</label>
+                </div>
+                <a href="#"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+
+        <div class="vendor-card" id="vendor-card-5">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 5</p>
+                <div class="final-rating" id="rating-display-5">★★★☆☆ <span>(3.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-5" name="rating-5" value="5">
+                    <label for="star5-5">★</label>
+                    <input type="radio" id="star4-5" name="rating-5" value="4">
+                    <label for="star4-5">★</label>
+                    <input type="radio" id="star3-5" name="rating-5" value="3">
+                    <label for="star3-5">★</label>
+                    <input type="radio" id="star2-5" name="rating-5" value="2">
+                    <label for="star2-5">★</label>
+                    <input type="radio" id="star1-5" name="rating-5" value="1">
+                    <label for="star1-5">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+        <div class="vendor-card" id="vendor-card-5">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 6</p>
+                <div class="final-rating" id="rating-display-5">★★★☆☆ <span>(3.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-6" name="rating-6" value="5">
+                    <label for="star5-6">★</label>
+                    <input type="radio" id="star4-6" name="rating-6" value="4">
+                    <label for="star4-6">★</label>
+                    <input type="radio" id="star3-6" name="rating-6" value="3">
+                    <label for="star3-6">★</label>
+                    <input type="radio" id="star2-6" name="rating-6" value="2">
+                    <label for="star2-6">★</label>
+                    <input type="radio" id="star1-6" name="rating-6" value="1">
+                    <label for="star1-6">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+        <div class="vendor-card" id="vendor-card-5">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 7</p>
+                <div class="final-rating" id="rating-display-5">★★★☆☆ <span>(3.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-7" name="rating-7" value="5">
+                    <label for="star5-7">★</label>
+                    <input type="radio" id="star4-7" name="rating-7" value="4">
+                    <label for="star4-7">★</label>
+                    <input type="radio" id="star3-7" name="rating-7" value="3">
+                    <label for="star3-7">★</label>
+                    <input type="radio" id="star2-7" name="rating-7" value="2">
+                    <label for="star2-7">★</label>
+                    <input type="radio" id="star1-7" name="rating-6" value="1">
+                    <label for="star1-7">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+
+        <!-- Vendor 8 -->
+        <div class="vendor-card" id="vendor-card-8">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 8</p>
+                <div class="final-rating" id="rating-display-8">★★★★★ <span>(5.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-8" name="rating-8" value="5">
+                    <label for="star5-8">★</label>
+                    <input type="radio" id="star4-8" name="rating-8" value="4">
+                    <label for="star4-8">★</label>
+                    <input type="radio" id="star3-8" name="rating-8" value="3">
+                    <label for="star3-8">★</label>
+                    <input type="radio" id="star2-8" name="rating-8" value="2">
+                    <label for="star2-8">★</label>
+                    <input type="radio" id="star1-8" name="rating-8" value="1">
+                    <label for="star1-8">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- map  -->
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>
+                    We connect local vegetable vendors with customers, providing fresh
+                    produce at the best prices.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Vendors</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: support@farm2cart.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/ashishh.h/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vegetable Market | All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+<script src="script.js"></script>/
+
+</html>
